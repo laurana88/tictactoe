@@ -6,9 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Improvements
 
-### Implemented Hooks
-
-After reading about the new hooks available (specifically setState), I updated the code to use hooks.
+1. After reading about the new hooks available (specifically setState), I updated the code to use hooks.
 
 ## Future Improvements
 
@@ -22,6 +20,8 @@ These are based on the ideas listed in the tutorial.
 6. When no one wins, display a message about the result being a draw.
 
 ## Available Scripts
+
+(These are the scripts that come with Create React App.)
 
 In the project directory, you can run:
 
