@@ -6,21 +6,23 @@ const Board = (props) => {
     const renderSquare = (i) => {
       return <Square 
         value={props.squares[i]}
-        onClick={() => props.onClick(i)} 
+        onClick={() => props.onClick(i)}
+          key={i} 
       />;
+    }
+
+    const createBoard = (total) => {
+      let board = [];
+      for (let i = 0; i < total; i++) {
+        console.log(board);
+        board.push(renderSquare(i));
+      }
+      return board;
     }
   
     return (
       <div className="game-board">
-          {renderSquare(0)}
-          {renderSquare(1)}
-          {renderSquare(2)}
-          {renderSquare(3)}
-          {renderSquare(4)}
-          {renderSquare(5)}
-          {renderSquare(6)}
-          {renderSquare(7)}
-          {renderSquare(8)}
+        {createBoard(9)}
       </div>
     );
   }
