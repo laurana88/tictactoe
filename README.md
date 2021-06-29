@@ -9,15 +9,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 1. After reading about the new hooks available (specifically setState), I updated the code to use hooks.
 2. Display the location for each move in the format (col, row) in the move history list.
 3. Bold the currently selected item in the move list.
-4. Rewrite Board to use a loop to make the squares (this is slightly different than the step in the tutorial since I had already removed the row - therefore just one loop was needed).
-
-## Future Improvements
-
-These are based on the ideas listed in the tutorial.
-
-1. Add a toggle button that lets you sort the moves in either ascending or descending order.
-2. When someone wins, highlight the three squares that caused the win.
-3. When no one wins, display a message about the result being a draw.
+4. Rewrite Board component to use a loop to make the squares (this is slightly different than the step in the tutorial since I had already removed the row - therefore just one loop was needed).
+5. Add a toggle button that lets you sort the moves in either ascending or descending order.
+6. When someone wins, highlight the three squares that caused the win.
+7. When no one wins, display a message about the result being a draw.
 
 ## Available Scripts
 

@@ -3,21 +3,38 @@ import Square from './Square'
 
 const Board = (props) => {
 
-    const renderSquare = (i) => {
-      return <Square 
-        value={props.squares[i]}
-        onClick={() => props.onClick(i)}
-          key={i} 
-      />;
-    }
-
     const createBoard = (total) => {
       let board = [];
       for (let i = 0; i < total; i++) {
-        console.log(board);
         board.push(renderSquare(i));
       }
       return board;
+    }
+
+    const squareClass = (i) => {
+      if (props.winningline && props.winningline.line.includes(i)) {
+        return 'highlight ';  
+      }
+      return '';
+    }
+
+    const ifDraw = () => {
+      if (props.status.includes('DRAW')) {
+        return 'draw ';
+      }
+      return '';
+    }
+
+    const renderSquare = (i) => {
+      // const squareClass = "square";
+
+      return <Square 
+        value={props.squares[i]}
+        onClick={() => props.onClick(i)}
+        key={i}
+        line={props.winningline}
+        class={squareClass(i) + 'square ' + ifDraw()}
+      />;
     }
   
     return (
